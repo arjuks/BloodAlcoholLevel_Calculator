@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Weight"
+        android:id="@+id/Weight"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Gender"
+        android:id="@+id/Gender"
+        android:layout_alignTop="@+id/Weight_value"
+        android:layout_toRightOf="@+id/Weight_value"
+        android:layout_toEndOf="@+id/Weight_value" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Gender_switch"
+        android:id="@+id/Gender_switch"
+        android:layout_alignTop="@+id/Weight_value"
+        android:layout_toLeftOf="@+id/alcohol_value"
+        android:layout_toStartOf="@+id/alcohol_value"
+        android:checked="false"/>
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="38dp"
+        android:inputType="number"
+        android:ems="10"
+        android:digits="0123456789"
+        android:id="@+id/Weight_value"
+        android:hint="Enter Weight"
+        android:layout_toRightOf="@+id/Weight"
+        android:layout_toEndOf="@+id/Weight"
+        android:layout_alignTop="@+id/Weight" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button"
+        android:id="@+id/Save_button"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/Weight_value"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/drink_size"
+        android:id="@+id/Drink_size"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/Save_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:layout_marginTop="155dp"
+        android:layout_marginLeft="90dp"
+        android:layout_alignBottom="@+id/Drink_size"
+        android:id="@+id/radio_group">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio1oz"
+            android:id="@+id/radio_1oz"
+            android:checked="true"
+             />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio5oz"
+            android:id="@+id/radio5oz"
+            android:layout_marginLeft="20dp"
+             />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio12oz"
+            android:id="@+id/radio12oz"
+            android:layout_marginLeft="20dp"
+           />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alcoholpercent"
+        android:id="@+id/alcohol"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <SeekBar
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:progress="1"
+        android:max="5"
+        android:layout_alignTop="@+id/alcohol"
+        android:layout_toRightOf="@+id/alcohol"
+        android:layout_toEndOf="@+id/alcohol" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alcohol_value"
+        android:id="@+id/alcohol_value"
+        android:layout_alignBottom="@+id/seekBar"
+        android:layout_alignRight="@+id/Save_button"
+        android:layout_alignEnd="@+id/Save_button" />
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_drink_button"
+        android:id="@+id/add_drink_button"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_button"
+        android:id="@+id/reset_button"
+        android:layout_below="@+id/seekBar"
+        android:layout_toRightOf="@+id/add_drink_button"
+        android:layout_toEndOf="@+id/add_drink_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/bac_level"
+        android:id="@+id/bac_level_label"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/add_drink_button"
+        android:layout_alignLeft="@+id/your_status"
+        android:layout_alignStart="@+id/your_status" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/status_label"
+        android:id="@+id/your_status"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/alcohol"
+        android:layout_toEndOf="@+id/alcohol" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/bac_value"
+        android:id="@+id/bac_value"
+        android:layout_alignTop="@+id/bac_level_label"
+        android:layout_alignLeft="@+id/reset_button"
+        android:layout_alignStart="@+id/reset_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/status_value"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/Gender"
+        android:layout_alignEnd="@+id/Gender" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:max="25"
+        android:minHeight="50dp"
+        android:layout_below="@+id/bac_level_label"
+        android:layout_alignRight="@+id/Gender_switch"
+        android:layout_alignEnd="@+id/Gender_switch" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textViewGender"
+        android:layout_below="@+id/Weight_value"
+        android:layout_alignRight="@+id/Gender_switch"
+        android:layout_alignEnd="@+id/Gender_switch" />
+
+
+</RelativeLayout>
